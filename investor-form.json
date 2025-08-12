@@ -1,0 +1,626 @@
+{
+  "title": "Investor Profile",
+  "showQuestionNumbers": "off",
+  "widthMode": "responsive",
+  "completeText": "Submit",
+  "pages": [
+    {
+      "name": "page_investor_info",
+      "title": "Investor Information",
+      "elements": [
+        {
+          "type": "text",
+          "name": "name",
+          "title": "Name",
+          "isRequired": true,
+          "width": "50%"
+        },
+        {
+          "type": "text",
+          "name": "spouseName",
+          "title": "Spouse\u2019s Name",
+          "width": "50%"
+        },
+        {
+          "type": "text",
+          "name": "streetAddress",
+          "title": "Street Address",
+          "width": "100%"
+        },
+        {
+          "type": "panel",
+          "name": "cityStateZip",
+          "startWithNewLine": true,
+          "elements": [
+            {
+              "type": "text",
+              "name": "city",
+              "title": "City",
+              "width": "33%"
+            },
+            {
+              "type": "text",
+              "name": "state",
+              "title": "State",
+              "width": "33%"
+            },
+            {
+              "type": "text",
+              "name": "zip",
+              "title": "Zip",
+              "width": "34%"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "phones",
+          "elements": [
+            {
+              "type": "text",
+              "name": "phone",
+              "title": "Phone No.",
+              "inputType": "tel",
+              "width": "33%"
+            },
+            {
+              "type": "text",
+              "name": "mobile",
+              "title": "Mobile No.",
+              "inputType": "tel",
+              "width": "33%"
+            },
+            {
+              "type": "text",
+              "name": "fax",
+              "title": "Fax No.",
+              "width": "34%"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "emails",
+          "elements": [
+            {
+              "type": "text",
+              "name": "email",
+              "title": "Email Address",
+              "inputType": "email",
+              "validators": [
+                {
+                  "type": "email"
+                }
+              ],
+              "width": "50%"
+            },
+            {
+              "type": "text",
+              "name": "secondaryEmail",
+              "title": "Secondary Email Address",
+              "inputType": "email",
+              "validators": [
+                {
+                  "type": "email"
+                }
+              ],
+              "width": "50%"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "ssns",
+          "elements": [
+            {
+              "type": "text",
+              "name": "ssn",
+              "title": "Social Security No.",
+              "width": "50%"
+            },
+            {
+              "type": "text",
+              "name": "spouseSSN",
+              "title": "Spouse\u2019s Social Security No.",
+              "width": "50%"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "occupations",
+          "elements": [
+            {
+              "type": "text",
+              "name": "occupation",
+              "title": "Occupation",
+              "width": "50%"
+            },
+            {
+              "type": "text",
+              "name": "spouseOccupation",
+              "title": "Spouse\u2019s Occupation",
+              "width": "50%"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "selfEmployed",
+          "title": "Self Employed",
+          "choices": [
+            "Full Time",
+            "Part Time",
+            "Retired"
+          ],
+          "showSelectAllItem": false
+        },
+        {
+          "type": "panel",
+          "name": "entity",
+          "title": "Entity Information (if any)",
+          "elements": [
+            {
+              "type": "text",
+              "name": "entityName",
+              "title": "Entity Name"
+            },
+            {
+              "type": "text",
+              "name": "entityStreet",
+              "title": "Street Address"
+            },
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "entityCity",
+                  "title": "City",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityState",
+                  "title": "State",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityZip",
+                  "title": "Zip",
+                  "width": "34%"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "entityPhone",
+                  "title": "Phone No.",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityMobile",
+                  "title": "Mobile No.",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityFax",
+                  "title": "Fax No.",
+                  "width": "34%"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "entityTIN",
+                  "title": "TIN No.",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityStateFormed",
+                  "title": "State Entity was formed",
+                  "width": "33%"
+                },
+                {
+                  "type": "text",
+                  "name": "entityYearEstablished",
+                  "title": "Year Established",
+                  "width": "34%"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "entityTitle",
+              "title": "Title Held (President/Member/Partner/Etc.)"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "poc",
+          "title": "Preferred Point of Contact",
+          "elements": [
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "pocName",
+                  "title": "Name",
+                  "width": "50%"
+                },
+                {
+                  "type": "text",
+                  "name": "pocRelationship",
+                  "title": "Relationship",
+                  "width": "50%"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "pocPhone",
+                  "title": "Phone No.",
+                  "inputType": "tel",
+                  "width": "50%"
+                },
+                {
+                  "type": "text",
+                  "name": "pocEmail",
+                  "title": "Email Address",
+                  "inputType": "email",
+                  "validators": [
+                    {
+                      "type": "email"
+                    }
+                  ],
+                  "width": "50%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page_experience",
+      "title": "Investment Experience",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "expTrustDeeds",
+          "title": "Do you have prior experience investing in trust deeds?",
+          "description": "Yes \u2192 TDO, No \u2192 MIF",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "expFunds",
+          "title": "Do you have prior experience investing in real estate funds or pooled investments?",
+          "description": "\u201cYes\u201d suggests interest in MIF (pooled funds); \u201cNo\u201d may favor TDO for individual control.",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "workWithBroker",
+          "title": "Do you currently work with a broker assisting you with your trust deed or fund investments?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "numPrevInvestments",
+          "title": "Number of previous investments in notes secured by trust deeds or real property sales contracts",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "type": "comment",
+          "name": "otherInvestmentExperience",
+          "title": "Other investment experience (e.g., stocks, bonds, real estate, funds)"
+        }
+      ]
+    },
+    {
+      "name": "page_preferences",
+      "title": "Investment Preferences",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "hasMaxSingleInvestment",
+          "title": "Do you have a maximum amount that you invest in any single investment?",
+          "description": "If Yes with a low amount, suggests MIF (diversified); high or No may indicate TDO tolerance for larger single-asset exposure.",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "maxSingleAmount",
+          "title": "If yes: $",
+          "visibleIf": "{hasMaxSingleInvestment} = 'Yes'",
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "type": "radiogroup",
+          "name": "hasLocationPreference",
+          "title": "Do you have a preference as to the location of the property(ies)?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "locationPreferenceValue",
+          "title": "If yes, location(s)",
+          "visibleIf": "{hasLocationPreference} = 'Yes'"
+        },
+        {
+          "type": "checkbox",
+          "name": "propertyTypes",
+          "title": "Do you have a preference as to the type of the property(ies)?",
+          "description": "\u201cMixed/Diversified Portfolio\u201d leans toward MIF; specific types like SFR or Commercial suggest TDO (hands-on selection).",
+          "hasOther": true,
+          "otherText": "Other",
+          "choices": [
+            "SFR",
+            "Commercial",
+            "Multi-Family",
+            "Mixed/Diversified Portfolio"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "hasTermPreference",
+          "title": "Do you have a preference as to the term of the investment?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "termOptions",
+          "title": "Term Options",
+          "visibleIf": "{hasTermPreference} = 'Yes'",
+          "choices": [
+            "Short Term (1-3 months)",
+            "Mid Term (4-12 months)",
+            "Long Term (13-60 months)",
+            "Flexible/Varies by Portfolio"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "hasLienPreference",
+          "title": "Do you have a lien position preference?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "lienOptions",
+          "title": "Lien Position",
+          "visibleIf": "{hasLienPreference} = 'Yes'",
+          "choices": [
+            "1st",
+            "2nd",
+            "3rd",
+            "No Preference"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "willingFractional",
+          "title": "Are you willing to participate in Fractionalized Loans/Multi-Lender or Pooled Investments?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "diversificationLevel",
+          "title": "Diversification Level Preference",
+          "choices": [
+            "Single Property/Asset",
+            "Multiple Properties/Assets (Diversified)",
+            "No Preference"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "managementPreference",
+          "title": "Management Preference",
+          "choices": [
+            "Self-Select/Review Each Investment",
+            "Professionally Managed",
+            "No Preference"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "returnPreference",
+          "title": "Return Structure Preference",
+          "choices": [
+            "Fixed Monthly Interest Payments",
+            "Variable/Portfolio-Based Distributions (e.g., Quarterly)",
+            "No Preference"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "involvementLevel",
+          "title": "Involvement Level",
+          "choices": [
+            "High (Review Deal Details/Parameters)",
+            "Low (Passive Oversight)",
+            "No Preference"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page_liquidity",
+      "title": "Fund Availability & Liquidity Preferences",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "fundSelfDirected",
+          "title": "Do you fund using a self-directed IRA, 401K, etc.?",
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "turnaroundTime",
+          "title": "What is the turnaround time for fund availability (e.g., days/weeks)"
+        },
+        {
+          "type": "text",
+          "name": "expectedAverageReturnPercent",
+          "title": "What is the expected average return? (%)",
+          "inputType": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "type": "radiogroup",
+          "name": "estimatedLiquidAssets",
+          "title": "Estimated Liquid Assets Available for Investment",
+          "choices": [
+            "Under $100,000",
+            "$100,001-$500,000",
+            "$500,001-$1,000,000",
+            "Over $1,000,000"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "liquidityNeeds",
+          "title": "Liquidity Needs",
+          "choices": [
+            "High (Quick Access to Cash)",
+            "Moderate (Some Flexibility)",
+            "Low (Long-Term Commitment OK)"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "riskTolerance",
+          "title": "Risk Tolerance",
+          "choices": [
+            "Higher Yield with Individual Risk",
+            "Balanced Risk through Diversification",
+            "Lower Risk Priority"
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "investmentObjectives",
+          "title": "Investment Objectives"
+        },
+        {
+          "type": "radiogroup",
+          "name": "vesting",
+          "title": "Please place a check mark to indicate Vesting",
+          "hasOther": true,
+          "otherText": "Other",
+          "choices": [
+            "A Single man/woman",
+            "Tenants in Common",
+            "A Unmarried man/woman",
+            "Corporation",
+            "A married man/woman as his/her separate property",
+            "Partnership",
+            "Joint Tenancy",
+            "Trustees of a Trust",
+            "Community Property",
+            "Limited Liability Corporation (LLC)",
+            "Community Property with Right of Survivorship"
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "acknowledgment",
+          "title": "Acknowledgment",
+          "choices": [
+            "We have received the Department of Real Estate Booklet titled, \u201cTrust Deed Investments - What you should know!!\u201d, and are aware a copy is available at WWW.MORFINANCIAL.COM."
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "signatures",
+          "title": "Signatures",
+          "elements": [
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "investorSignature",
+                  "title": "Investor Signature",
+                  "width": "50%"
+                },
+                {
+                  "type": "text",
+                  "name": "investorDate",
+                  "title": "Date",
+                  "inputType": "date",
+                  "width": "50%"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "brokerSignature",
+                  "title": "Broker Signature",
+                  "width": "50%"
+                },
+                {
+                  "type": "text",
+                  "name": "brokerDate",
+                  "title": "Date",
+                  "inputType": "date",
+                  "width": "50%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
