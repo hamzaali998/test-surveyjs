@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOR Investor Profile</title>
+  <link href="https://unpkg.com/survey-core/defaultV2.min.css" rel="stylesheet" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#f5f7fb; margin:0; }
+    .wrap { max-width: 980px; margin: 24px auto; padding: 16px; background: #fff; border-radius: 10px; box-shadow: 0 2px 20px rgba(0,0,0,.06); }
+    h1 { font-size: 1.4rem; margin: 0 0 12px; }
+    #surveyContainer { padding-top: 8px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Investor Profile</h1>
+  <div id="surveyContainer"></div>
+</div>
+
+<script src="https://unpkg.com/survey-core/survey.core.min.js"></script>
+<script src="https://unpkg.com/survey-knockout-ui/survey-knockout-ui.min.js"></script>
+<script>
+  // Optional: submit to your backend (e.g., Cloudflare Worker) when complete.
+  // window.SURVEY_POST_URL = "https://api.morfinancial.com/am-update";
+  // window.SURVEY_POST_HEADERS = { "Content-Type": "application/json" };
+
+  async function loadSurvey() {
+    const res = await fetch("survey.json", { cache: "no-store" });
+    const json = await res.json();
+    const model = new Survey.Model(json);
+
+    model.onComplete.add(async (sender) => {
+      const data = sender.data;
+      console.log("Survey data:", data);
+      if (window.SURVEY_POST_URL) {
+        try {
+          await fetch(window.SURVEY_POST_URL, {
+            method: "POST",
+            headers: Object.assign({"Content-Type":"application/json"}, window.SURVEY_POST_HEADERS || {}),
+            body: JSON.stringify(data)
+          });
+        } catch (e) {
+          console.warn("POST failed:", e);
+        }
+      }
+    });
+
+    const app = new SurveyKnockoutUI.Survey({ model });
+    app.render(document.getElementById("surveyContainer"));
+  }
+  loadSurvey();
+</script>
+</body>
+</html>
